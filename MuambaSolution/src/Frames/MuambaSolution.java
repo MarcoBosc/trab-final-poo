@@ -47,6 +47,7 @@ public class MuambaSolution extends javax.swing.JFrame {
         jPanel8.setBackground(new java.awt.Color(51, 51, 48));
 
         jLabel11.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("SISTEMA DE GERENCIAMENTO DE COMÉRCIO PARALELO INTERNACIONAL");
         jLabel11.setToolTipText("");
 
