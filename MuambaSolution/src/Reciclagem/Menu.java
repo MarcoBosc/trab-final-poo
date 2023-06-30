@@ -2,9 +2,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
  */
-package Frames;
-import Frames.Menu;
-import Frames.Produtos;
+package Reciclagem;
+import Reciclagem.Menu;
 /**
  *
  * @author marco
@@ -129,38 +128,9 @@ public class Menu extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnFazerMuamba;
-    private javax.swing.JButton btnMuambar;
-    private javax.swing.JButton btnMuambar1;
-    private javax.swing.JButton btnMuambar2;
-    private javax.swing.JButton btnMuambar3;
-    private javax.swing.JButton btnMuambeiros1;
-    private javax.swing.JButton btnMuambeiros2;
-    private javax.swing.JButton btnMuambeiros3;
-    private javax.swing.JButton btnMuambeiros4;
     private javax.swing.JButton btnMuambeirosDisp;
-    private javax.swing.JButton btnProdutos;
-    private javax.swing.JButton btnProdutos1;
-    private javax.swing.JButton btnProdutos2;
-    private javax.swing.JButton btnProdutos3;
     private javax.swing.JButton btnProdutosDisp;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     // End of variables declaration//GEN-END:variables
 }

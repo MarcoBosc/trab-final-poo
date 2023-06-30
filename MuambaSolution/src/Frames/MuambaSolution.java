@@ -5,28 +5,18 @@
 package Frames;
 
 import java.util.Locale;
-import Frames.Produtos;
-import Frames.Menu;
-
+import Reciclagem.Produtos;
+import Reciclagem.Menu;
 
 /**
  *
  * @author Computacao
  */
 public class MuambaSolution extends javax.swing.JFrame {
-    private Menu menu;
-    private Produtos produtos;
-    
+
     public MuambaSolution() {
         initComponents();
-        menu = new Menu();
-        produtos = new Produtos();
-        
-        menu.setVisible(true);
-        produtos.setVisible(false);
-        
-        getContentPane().add(menu);
-        getContentPane().add(produtos);
+
     }
 
     /**
@@ -39,6 +29,11 @@ public class MuambaSolution extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        btnProdutosDisp = new javax.swing.JButton();
+        btnFazerMuamba = new javax.swing.JButton();
+        btnMuambeirosDisp = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -49,15 +44,82 @@ public class MuambaSolution extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
+        jPanel8.setBackground(new java.awt.Color(51, 51, 48));
+
+        jLabel11.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jLabel11.setText("SISTEMA DE GERENCIAMENTO DE COMÉRCIO PARALELO INTERNACIONAL");
+        jLabel11.setToolTipText("");
+
+        btnProdutosDisp.setBackground(new java.awt.Color(42, 42, 42));
+        btnProdutosDisp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Produtos.png"))); // NOI18N
+        btnProdutosDisp.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnProdutosDisp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProdutosDispActionPerformed(evt);
+            }
+        });
+
+        btnFazerMuamba.setBackground(new java.awt.Color(42, 42, 42));
+        btnFazerMuamba.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Muambar.png"))); // NOI18N
+        btnFazerMuamba.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnFazerMuamba.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFazerMuambaActionPerformed(evt);
+            }
+        });
+
+        btnMuambeirosDisp.setBackground(new java.awt.Color(42, 42, 42));
+        btnMuambeirosDisp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/Cadastro de Muambeiros.png"))); // NOI18N
+        btnMuambeirosDisp.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMuambeirosDisp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMuambeirosDispActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                .addContainerGap(270, Short.MAX_VALUE)
+                .addComponent(jLabel11)
+                .addGap(260, 260, 260))
+            .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel8Layout.createSequentialGroup()
+                    .addGap(92, 92, 92)
+                    .addComponent(btnMuambeirosDisp, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(73, 73, 73)
+                    .addComponent(btnProdutosDisp, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(73, 73, 73)
+                    .addComponent(btnFazerMuamba, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(92, Short.MAX_VALUE)))
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(546, Short.MAX_VALUE))
+            .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel8Layout.createSequentialGroup()
+                    .addGap(166, 166, 166)
+                    .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(btnFazerMuamba, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnMuambeirosDisp, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnProdutosDisp, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addContainerGap(167, Short.MAX_VALUE)))
+        );
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1197, Short.MAX_VALUE)
+            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 596, Short.MAX_VALUE)
+            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel2.setBackground(new java.awt.Color(71, 71, 71));
@@ -104,7 +166,26 @@ public class MuambaSolution extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnProdutosDispActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProdutosDispActionPerformed
+        Produtoss prod = new Produtoss();
+        prod.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnProdutosDispActionPerformed
+
+    private void btnMuambeirosDispActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMuambeirosDispActionPerformed
+      Muambeiros muam = new Muambeiros();
+      muam.setVisible(true);
+      this.dispose();
+    }//GEN-LAST:event_btnMuambeirosDispActionPerformed
+
+    private void btnFazerMuambaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFazerMuambaActionPerformed
+        Muambarr muambarrFrame = new Muambarr();
+        muambarrFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnFazerMuambaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -142,9 +223,14 @@ public class MuambaSolution extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnFazerMuamba;
+    private javax.swing.JButton btnMuambeirosDisp;
+    private javax.swing.JButton btnProdutosDisp;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel8;
     // End of variables declaration//GEN-END:variables
 }
