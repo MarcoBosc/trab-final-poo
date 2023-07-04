@@ -1,0 +1,38 @@
+[
+  {
+    "nome": "a",
+    "idade": 15,
+    "endereco": "DASDADASD",
+    "sexo": "ASDASDADA",
+    "altura": 156.0,
+    "telefone": "656496546",
+    "registro": "15",
+    "salario": 1563598.0,
+    "statusDetencao": false,
+    "tipo": "Funcionario"
+  },
+  {
+    "nome": "AA",
+    "idade": 156,
+    "endereco": "DASDASDASD",
+    "sexo": "ASDADASD",
+    "altura": 185.0,
+    "telefone": "161651651651",
+    "registro": "44",
+    "salario": 55555.0,
+    "statusDetencao": false,
+    "tipo": "Funcionario"
+  },
+  {
+    "nome": "AAA",
+    "idade": 19,
+    "endereco": "ASDASDASDA",
+    "sexo": "ASDASDAD",
+    "altura": 156.0,
+    "telefone": "951591952",
+    "registro": "55",
+    "salario": 15633.0,
+    "statusDetencao": false,
+    "tipo": "Funcionario"
+  }
+]

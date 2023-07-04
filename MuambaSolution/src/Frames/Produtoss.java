@@ -4,6 +4,10 @@
  */
 package Frames;
 
+import javax.swing.JOptionPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author André
@@ -15,6 +19,8 @@ public class Produtoss extends javax.swing.JFrame {
      */
     public Produtoss() {
         initComponents();
+        Muambarr muambarr = new Muambarr();
+        muambarr.popularTabelaProdutos(jtProdutos);
     }
 
     /**
@@ -36,7 +42,8 @@ public class Produtoss extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jbEnviar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel2.setBackground(new java.awt.Color(71, 71, 71));
         jPanel2.setForeground(new java.awt.Color(60, 63, 65));
@@ -90,14 +97,14 @@ public class Produtoss extends javax.swing.JFrame {
         jtProdutos.setBackground(new java.awt.Color(71, 71, 71));
         jtProdutos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Hifone 15 Pro Max", "25", "350,00"},
-                {"Galaxia S32 Mega", "32", "320,00"},
-                {"Tênis Abibas Super Star", "45", "40,00"},
-                {"Camiseta Lactose", "54", "24,00"},
-                {"Fone de ouvido gamer razer", "28", "19,00"},
-                {"Whisky Jhons Daphne 1L", "27", "20,00"},
-                {"Camiseta Sperm", "12", "12,00"},
-                {"Tênis nice air jordânio", "10", "30,00"}
+                {"Hifone 15 Pro Max", "0", "350,00"},
+                {"Galaxia S32 Mega", "0", "320,00"},
+                {"Tênis Abibas Super Star", "0", "40,00"},
+                {"Camiseta Lactose", "0", "24,00"},
+                {"Fone de ouvido gamer razer", "0", "19,00"},
+                {"Whisky Jhons Daphne 1L", "0", "20,00"},
+                {"Camiseta Sperm", "0", "12,00"},
+                {"Tênis nice air jordânio", "0", "30,00"}
             },
             new String [] {
                 "NOME", "QUANTIDADE", "VALOR PAGO"
@@ -120,6 +127,11 @@ public class Produtoss extends javax.swing.JFrame {
         jbEnviar.setForeground(new java.awt.Color(255, 255, 255));
         jbEnviar.setText("Enviar para o camelô");
         jbEnviar.setActionCommand("");
+        jbEnviar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbEnviarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -171,15 +183,27 @@ public class Produtoss extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMenuActionPerformed
-      MuambaSolution muamS = new MuambaSolution();
+        MuambaSolution muamS = new MuambaSolution();
         this.dispose();
         muamS.setVisible(true);
     }//GEN-LAST:event_jbMenuActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-   
+    private void jbEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEnviarActionPerformed
+        esvaziarCampoQuantidade(jtProdutos);
+    }//GEN-LAST:event_jbEnviarActionPerformed
+    public JTable getTabelaProdutos() {
+        return jtProdutos;
+    }
+
+    public void esvaziarCampoQuantidade(JTable tabela) {
+        DefaultTableModel model = (DefaultTableModel) tabela.getModel();
+
+        for (int i = 0; i < model.getRowCount(); i++) {
+            model.setValueAt(0, i, 1);
+        }
+
+        JOptionPane.showMessageDialog(null, "Enviado para o camelo com sucesso.");
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

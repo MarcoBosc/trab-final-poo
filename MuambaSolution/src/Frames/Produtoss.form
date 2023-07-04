@@ -2,7 +2,8 @@
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
-    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -192,14 +193,14 @@
                       <Data value="T&#xea;nis nice air jord&#xe2;nio"/>
                     </Column>
                     <Column editable="false" title="QUANTIDADE" type="java.lang.Object">
-                      <Data value="25"/>
-                      <Data value="32"/>
-                      <Data value="45"/>
-                      <Data value="54"/>
-                      <Data value="28"/>
-                      <Data value="27"/>
-                      <Data value="12"/>
-                      <Data value="10"/>
+                      <Data value="0"/>
+                      <Data value="0"/>
+                      <Data value="0"/>
+                      <Data value="0"/>
+                      <Data value="0"/>
+                      <Data value="0"/>
+                      <Data value="0"/>
+                      <Data value="0"/>
                     </Column>
                     <Column editable="false" title="VALOR PAGO" type="java.lang.Object">
                       <Data value="350,00"/>
@@ -236,6 +237,9 @@
             <Property name="text" type="java.lang.String" value="Enviar para o camel&#xf4;"/>
             <Property name="actionCommand" type="java.lang.String" value=""/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbEnviarActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

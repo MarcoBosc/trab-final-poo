@@ -4,11 +4,13 @@
  */
 package Trabalhadores;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Computacao
  */
-public class Funcionario extends Pessoa {
+public class Funcionario extends Pessoa implements Serializable{
     private String registro;
     private double salario;
     private boolean statusDetencao;

@@ -4,11 +4,13 @@
  */
 package Trabalhadores;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Computacao
  */
-public abstract class Pessoa {
+public abstract class Pessoa implements Serializable{
     private String nome;
     private int idade;
     private String endereco;
